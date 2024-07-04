@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
 
 //const inter = Inter({ subsets: ["latin"] });
 const poppin = Poppins({subsets: ['latin'],
@@ -26,7 +27,7 @@ export default function RootLayout({
         <main className="font-normal">
           <Header />
           {children}
-          {/* footer */}
+          <Footer />
         </main>
       </body>
     </html>
