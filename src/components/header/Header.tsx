@@ -1,6 +1,7 @@
 'use client'
 
 import Link from "next/link"
+import { FaUserCircle } from "react-icons/fa";
 
 export default function Header() {
   return (
@@ -12,7 +13,7 @@ export default function Header() {
         <ul>
           <li>
             <Link href='/auth'>
-            auth
+              <FaUserCircle />
             </Link>
           </li>
           <li>
