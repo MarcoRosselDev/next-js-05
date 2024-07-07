@@ -1,3 +1,5 @@
+'use client'
+
 import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 
@@ -15,6 +17,7 @@ export default function Auth() {
           <input type="email" name="email" placeholder="name@company.com" required className="border border-gray-300 sm:text-sm text-black rounded-lg block w-full p-2.5 focus:outline-none"/>
           <input type="name" name="name" placeholder="Homero simpson" required className="border border-gray-300 sm:text-sm text-black rounded-lg block w-full p-2.5 focus:outline-none" />
           <input type="password" name="password" placeholder="password" minLength={6} required className="border border-gray-300 sm:text-sm text-black rounded-lg block w-full p-2.5 focus:outline-none" />
+          <button type='submit' className='w-full bg-tertiary-dark focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center'>Sign Up</button>
         </form>
         <button className="text-blue-700 underline">login</button>
       </div>

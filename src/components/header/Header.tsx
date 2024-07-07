@@ -23,7 +23,6 @@ export default function Header() {
             </Link>
           </li>
           <li className="ml-2">
-            <Link href='/'>
             {
               darkTheme? (
                 <MdOutlineLightMode 
@@ -43,7 +42,6 @@ export default function Header() {
                  />
               )
             }
-            </Link>
           </li>
         </ul>
       </div>
