@@ -5,6 +5,10 @@ export async function POST(request: NextRequest) {
   try {
     await connectMongoDB().catch(console.dir)
     //return NextResponse.json({
+
+    const body = await request.json()
+    console.log(body);
+    
     return NextResponse.json({
       message: "Hola from next js mongo db"
     })

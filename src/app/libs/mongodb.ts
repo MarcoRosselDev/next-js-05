@@ -1,19 +1,14 @@
 //const mongoose = require('mongoose');
 import mongoose from "mongoose"
 
-//const MONGO_URL = "mongodb://127.0.0.1/" // mongo db url al crear una base de datos
-//pol.123.pol
-//r8AmlzYisF88xN0I
-//const MONGO_URL = "mongodb+srv://pythonmode9:r8AmlzYisF88xN0I@hotel-project.kmjdfcv.mongodb.net/?retryWrites=true&w=majority&appName=hotel-project"
-//const MONGO_URL = "mongodb+srv://pythonmode9:r8AmlzYisF88xN0I@hotel-project.kmjdfcv.mongodb.net/"
-//const MONGO_URL = "mongodb+srv://pythonmode9:r8AmlzYisF88xN0I@marco0.udtj894.mongodb.net/"
-const MONGO_URL = "mongodb+srv://pythonmode9:r8AmlzYisF88xN0I@hotel-project.kmjdfcv.mongodb.net/"
-const uri = "mongodb+srv://pythonmode9:r8AmlzYisF88xN0I@hotel-project.kmjdfcv.mongodb.net/?appName=hotel-project";
-const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
+
+const url = "mongodb+srv://andresmarcorossel:RT89AC9nZPrr2HXF@cluster0.c4yrghf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } }
 
 export async function connectMongoDB() {
   try {
-    await mongoose.connect(MONGO_URL)
+    //await mongoose.connect(url, clientOptions)
+    await mongoose.connect(url) // ahora me lanza error si aplico (url, clientOptions) ? por que seara?
     //await mongoose.connection.db.admin().command({ ping: 1 });
     console.log("Connected to MongoDB.");
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
@@ -24,6 +19,9 @@ export async function connectMongoDB() {
   }
 }
 
+/* 
+//username:andresmarcorossel
+//RT89AC9nZPrr2HXF */
 /* 
 
 MONGO_URL='mongodb+srv://pythonmode9:r8AmlzYisF88xN0I@marco0.udtj894.mongodb.net/'
