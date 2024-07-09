@@ -1,8 +1,7 @@
 //const mongoose = require('mongoose');
 import mongoose from "mongoose"
 
-
-const url = "mongodb+srv://andresmarcorossel:RT89AC9nZPrr2HXF@cluster0.c4yrghf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const url = `${process.env.URL_USER_MDB}`
 //const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } }
 
 export async function connectMongoDB() {
