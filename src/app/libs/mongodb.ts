@@ -3,7 +3,7 @@ import mongoose from "mongoose"
 
 
 const url = "mongodb+srv://andresmarcorossel:RT89AC9nZPrr2HXF@cluster0.c4yrghf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } }
+//const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } }
 
 export async function connectMongoDB() {
   try {
@@ -14,9 +14,10 @@ export async function connectMongoDB() {
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } catch (error) {
     console.log(error);
-  } finally {
-    await mongoose.disconnect();
   }
+  /* } finally {
+    await mongoose.disconnect();
+  } */
 }
 
 /* 
