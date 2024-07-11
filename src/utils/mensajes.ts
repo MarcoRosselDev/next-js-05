@@ -11,6 +11,8 @@ export const messages = {
     a: "todo bien",
     usuario_creado: "usuario creado exitosamente",
     usuario_login:"que bueno tenerte de buelta",
+    password_restored: "password actualizado correctamente",
+    email_sended: "email enviado",
   },
   status:{
     400: "not found ...",
