@@ -6,6 +6,8 @@ export const messages = {
     password_mistake: "las contraseñas no coinsiden",
     email_existente: "ya existe un usuario con ese email",
     user_not_found: "el usuario no se encuentra registrado",
+    not_authorized: "no estas autorizado",
+    token_not_valid: "token no valido",
   },
   success:{
     a: "todo bien",

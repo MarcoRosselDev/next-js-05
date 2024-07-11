@@ -30,13 +30,13 @@ export async function POST(request: NextRequest) {
 
     // creamos un token para el usuario que luego guardaremos en una cookie
     const token = jwt.sign({data:rest}, `${process.env.HAS_PASS}`,{expiresIn: 86400*2})//86400 es un dia
-    const respuesta = NextResponse.json({       newUser: rest,      message: messages.success.usuario_creado},{status: 200})
+    const respuesta =                                         NextResponse.json({       newUser: rest,      message: messages.success.usuario_creado},{status: 200})
     respuesta.cookies.set("auth_cookie", token, { sameSite: "strict", maxAge: 86400*2, path: "/" })
     
     
     return respuesta
 
   } catch (error) {
-                                                      return NextResponse.json({message: messages.error.generic},{status: 400})
+    return                                                    NextResponse.json({message: messages.error.generic, error},{status: 400})
   }
 }
