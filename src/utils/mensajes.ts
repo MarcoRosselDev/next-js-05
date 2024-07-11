@@ -1,5 +1,6 @@
 export const messages = {
   error:{
+    generic: "algo salio mal !",
     needProps: "falta algun campo por completar",
     bad_email_format: "tu email no es valido",
     password_mistake: "las contraseñas no coinsiden",

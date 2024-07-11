@@ -6,6 +6,7 @@ import bcrypt from "bcryptjs"
 import jwt from "jsonwebtoken" 
 
 export async function POST(request:NextRequest) {
+
   try {
     await connectMongoDB()
     const body: IUser = await request.json()
@@ -13,12 +14,12 @@ export async function POST(request:NextRequest) {
 
 
     // validamos que se rellenaron los campos
-    if (!email || !password) { return NextResponse.json(    {message: messages.error.needProps}  ,   {status: 400}   )}
+    if (!email || !password) {        return NextResponse.json(    {message: messages.error.needProps}  ,   {status: 400}   )}
     const buscar_usuario = await User.findOne({email})
-    if (!buscar_usuario) { return NextResponse.json(    {message: messages.error.user_not_found}    ,   {status: 400}   )}
+    if (!buscar_usuario) {            return NextResponse.json(    {message: messages.error.user_not_found}    ,   {status: 400}   )}
     const comparacion_password: boolean = await bcrypt.compare(     password,      buscar_usuario.password      )
     // comparacion del password del body con el password del usuario encontrado en mongodb
-    if (!comparacion_password) { return NextResponse.json(    {message: messages.error.password_mistake}    ,   {status: 400}   )}
+    if (!comparacion_password) {      return NextResponse.json(    {message: messages.error.password_mistake}    ,   {status: 400}   )}
 
 
     // ahora podemos crear el token si paso todas las validaciones
@@ -30,7 +31,8 @@ export async function POST(request:NextRequest) {
 
 
     return respuesta
+
   } catch (error) {
-    console.log(error);
+    return NextResponse.json({message: messages.error.generic},{status: 400})
   }
 }
