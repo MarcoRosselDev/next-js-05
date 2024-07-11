@@ -14,7 +14,9 @@ export async function POST(request:NextRequest) {
     const body: { email: string } = await request.json()
     const { email } = body
     await connectMongoDB()
-    const encontrar_usuario = User.findOne({email})
+    const encontrar_usuario = await User.findOne({email})
+    console.log(encontrar_usuario);
+    
     // validar si existe el usuario
     if (!encontrar_usuario)                    return NextResponse.json({  message: messages.error.user_not_found  },{   status:400  }) 
     // @ts-ignore
