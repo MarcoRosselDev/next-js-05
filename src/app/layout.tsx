@@ -26,7 +26,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppin.className}>
         <ThemeProvider>
-
         <main className="font-normal">
           <Header />
           {children}

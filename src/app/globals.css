@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+main{
+/*   border: 5px solid greenyellow; */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
