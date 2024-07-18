@@ -1,16 +1,28 @@
+type Obj_fetch = {
+  _id: string
+  email: string
+  password: string
+  createdAt: string
+  updatedAt: string
+}
+
 export default async function prueba() {
-
   const respuesta = await fetch("http://localhost:3000/api/auth/get_data_users")
-  //data.json() 
   const d = await respuesta.json()
-  console.log(d)
-  const p = d.data.forEach(element => {
-    return (<div><p>{element}</p></div>)
-  });
-
+  const div = d.data.map((e:Obj_fetch) => {
+    return (
+      <>
+        <p>{e._id}</p>
+        <p>{e.email}</p>
+        <p>{e.password}</p>
+        <p>{e.createdAt}</p>
+        <p>{e.updatedAt}</p>
+      </>
+    )
+  })
   return (
     <div>
-      {p}
+      {div}
     </div>
   )
 }
