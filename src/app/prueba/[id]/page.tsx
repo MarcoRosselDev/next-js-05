@@ -12,6 +12,8 @@ type Obj_fetch = {
 export default async function prueba({params}: any) {
   const respuesta = await fetch("http://localhost:3000/api/hotel/auth/get_data_users")
   const d = await respuesta.json()
+  console.log(params)
+  
   const div = d.data.map((e:Obj_fetch) => {
     return (
       <>
