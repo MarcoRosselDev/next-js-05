@@ -5,9 +5,12 @@ type Obj_fetch = {
   createdAt: string
   updatedAt: string
 }
+// http://localhost:3000/prueba/id=123kjas ------------> url de ejemplo de id
+// al parecer podemos jugar con el nombre de la carpeta para resivir parametros en la url
+// prueba \ [id]
 
-export default async function prueba() {
-  const respuesta = await fetch("http://localhost:3000/api/auth/get_data_users")
+export default async function prueba({params}: any) {
+  const respuesta = await fetch("http://localhost:3000/api/hotel/auth/get_data_users")
   const d = await respuesta.json()
   const div = d.data.map((e:Obj_fetch) => {
     return (
@@ -17,6 +20,7 @@ export default async function prueba() {
         <p>{e.password}</p>
         <p>{e.createdAt}</p>
         <p>{e.updatedAt}</p>
+        <p>{params.id}</p>
       </>
     )
   })
