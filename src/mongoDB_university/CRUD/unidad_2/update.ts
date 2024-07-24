@@ -29,3 +29,37 @@
   { _id: ObjectId("5e8f8f8f8f8f8f8f8f8f8f8")},
   { $set: {subscribers: 98562}}) 
 */
+
+/* 
+db.birds.findOne({"common_name": "Canada Goose"})
+
+db.birds.updateOne(
+  {_id: ObjectId('6268413c613e55b82d7065d2')},
+  { $set: {tags: ["geese", "herbivore", "migration"]}})
+
+db.birds.findOne({_id: ObjectId("6268471e613e55b82d7065d7")})
+
+{
+  _id: ObjectId('6268471e613e55b82d7065d7'),
+  common_name: 'Great Horned Owl',
+  scientific_name: 'Bubo virginianus',
+  wingspan_cm: 111.76,
+  habitat: [ 'grasslands', 'farmland', 'tall forest' ],
+  diet: [ 'mice', 'small mammals', 'rabbits', 'shrews' ],
+  last_seen: ISODate('2022-05-19T20:20:44.083Z')
+}
+
+db.birds.updateOne(
+  {_id:ObjectId('6268471e613e55b82d7065d7')},
+  { $push: {diet: {$each: ["newts", "opossum", "skunks", "squirrels"]}}}
+)
+*/
+
+/* 
+db.birds.updateOne(
+  {"common_name": "Robin Redbreast"},
+  {
+  $inc: {"sightings": 1},
+  $set: {last_updated: new Date()}},
+  {upsert: true})
+*/

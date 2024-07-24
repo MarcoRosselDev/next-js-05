@@ -39,3 +39,18 @@
     categories: ["Data Science"],
   })
  */
+
+/*
+db.birds.findOne({"common_name": "Northern Cardinal"})
+
+db.birds.replaceOne(
+  { _id: ObjectId('6286809e2f3fa87b7d86dccd')},
+  {
+  "common_name": "Morning Dove",
+  "scientific_name": "Zenaida macroura",
+  "wingspan_cm": 37.23,
+  "habitat": ["urban areas", "farms", "grassland"],
+  "diet": ["seeds"],
+})
+
+*/
