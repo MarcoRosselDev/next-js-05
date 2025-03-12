@@ -8,7 +8,7 @@ class Peliculas {
   constructor(nombre:string, protagonistas: string[], actores:string[]){
     this.nombre = nombre,
     this.protagonistas = protagonistas,
-    this.actores = actores,
+    this.actores = actores
   }
 }
 
