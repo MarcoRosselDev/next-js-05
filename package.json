@@ -1,25 +1,29 @@
 {
   "name": "next-js-05",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
+  "keywords": [
+    "nextjs"
+  ],
+  "author": "Marco Rossel",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
+    "next": "^15.2.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.2.2"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@types/node": "22.13.10",
+    "@types/react": "19.0.10",
+    "eslint": "9.22.0",
     "eslint-config-next": "15.2.2",
-    "@eslint/eslintrc": "^3"
+    "typescript": "5.8.2"
   }
 }

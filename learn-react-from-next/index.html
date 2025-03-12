@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS DOM Manipulation</title>
+</head>
+<style>
+  body{
+    background-color: black;
+    color: whitesmoke;
+  }
+</style>
+<body>
+  <div id="app"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- babel script -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/jsx">
+    // seleccionar el div elemento con el id header
+    
+    function Header (props){
+      const title = props.title;
+      return (<h1>{title}</h1>)
+    }
+
+    function HomePage () {
+      const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+
+      const [likes, setLikes] = React.useState(0);
+      
+      function handleClick() {
+        setLikes(likes + 1);
+      }
+
+      return(
+        <div>
+          <h1>something interesting</h1>
+          <Header title='Hola mundo' />
+          {names.map((item, index) => (<p key={index}>{item}</p>))}
+          <button onClick={handleClick}>Like  {likes}</button>
+        </div>
+      )
+    }
+
+    const app = document.getElementById('app');
+    const root = ReactDOM.createRoot(app);
+    root.render(<HomePage />);
+    
+    /*
+    // crear un elemento h1
+    const h1 = document.createElement('h1');
+    
+    // crear un texto para el elemento h1
+    const texto = 'tomando el curso react de nextjs.org';
+    const headerContentNode = document.createTextNode(texto);
+
+    // añadir el texto al elemento h1
+    h1.append(headerContentNode);
+    
+    // añadir el h1 al elemento div
+    header.append(h1);
+    */
+  </script>
+</body>
+</html>
