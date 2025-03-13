@@ -1,16 +1,11 @@
 {
   "name": "next-js-05",
+  "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev"
   },
-  "keywords": [
-    "nextjs"
-  ],
   "author": "Marco Rossel",
   "license": "ISC",
   "description": "",
@@ -22,8 +17,6 @@
   "devDependencies": {
     "@types/node": "22.13.10",
     "@types/react": "19.0.10",
-    "eslint": "9.22.0",
-    "eslint-config-next": "15.2.2",
     "typescript": "5.8.2"
   }
 }
