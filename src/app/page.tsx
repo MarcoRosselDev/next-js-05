@@ -6,8 +6,8 @@ import ModeToggle from "@/ui/ThemeButton";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <div className={styles.body}>
+      <main className={styles.body}>
         <ModeToggle />
         <Image
           className={styles.logo}
