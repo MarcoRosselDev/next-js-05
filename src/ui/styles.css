@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+[data-theme="dark"] {
+  --background: black;
+  --foreground: white;
+  --reverce-logo-filter: invert();
+  --color: black;
+}
+
+[data-theme="light"] {
+  --background: white;
+  --foreground: black;
+  --reverce-logo-filter: none;
+  --color: lightblue;
+}
