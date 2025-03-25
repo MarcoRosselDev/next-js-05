@@ -7,6 +7,8 @@
 [data-theme="dark"] {
   --background: black;
   --foreground: white;
+  --maincolor: rgb(217, 217, 245);
+  --secondcolor: rgb(237, 237, 237);
   --reverce-logo-filter: invert();
   --color: black;
 }
@@ -14,6 +16,8 @@
 [data-theme="light"] {
   --background: white;
   --foreground: black;
+  --maincolor: #3179ed;
+  --secondcolor: rgb(60, 54, 54);
   --reverce-logo-filter: none;
   --color: lightblue;
 }

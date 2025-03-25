@@ -1,13 +1,23 @@
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-}
 /* .logo {
   filter: invert();
 } */
-.logo-black {
-  filter: invert();
+.logo {
+  filter: var(--reverce-logo-filter);
+  color: var(--color);
+  border: 1px solid var(--color);
 }
-.logo-withe {
-  filter: none;
+
+.main{
+  max-width: 600px;
 }
+
+/* 
+[data-theme="light"] {
+  --background: white;
+  --foreground: black;
+  --maincolor: blue;
+  --secondcolor: rgb(60, 54, 54);
+  --reverce-logo-filter: none;
+  --color: lightblue;
+}
+*/

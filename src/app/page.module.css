@@ -20,6 +20,14 @@ body {
   border: 1px solid var(--color);
 }
 
+.main {
+  max-width: 700px;
+  border: 3px solid var(--maincolor);
+
+  display: flex;
+  flex-direction: column;
+}
+
 /* .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
